@@ -1,0 +1,70 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page footer.
+}}
+
+<footer id="footer" class="text-light">
+    <div class="footer-main">
+        <div class="footer-bootom">
+            <div class="copyright_footer">
+            <p>{{# copyright_footer}}{{{copyright_footer}}}{{/ copyright_footer}}</p>
+            <ul class="appsdownload">
+                <li class="smedia-01"><a href="{{iosappurl}}" target="_blank"><i class="fa fa-apple"></i>Download iOS App</a></li>
+                <li class="smedia-01"><a href="{{androidappurl}}" target="_blank"><i class="fa fa-play"></i>Download Android App</a></li>
+                <li class="smedia-01"><a href="mailto:{{supporturl}}" target="_blank"><i class="fa fa-support"></i>Support</a></li>
+            </ul>
+            </div>
+            <div class="social-media">
+                {{# url}}
+                <ul>
+                    {{# fburl}}
+                        <li class="smedia-01"><a href="{{fburl}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    {{/ fburl}}
+                    {{# pinurl}}
+                       <li class="smedia-02"><a href="{{pinurl}}" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    {{/ pinurl}}
+                    {{# twurl}}
+                        <li class="smedia-03"><a href="{{twurl}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    {{/ twurl}}
+                    {{# gpurl}}
+                        <li class="smedia-04"><a href="{{gpurl}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    {{/ gpurl}}
+                </ul>
+                {{/ url}}
+            </div>
+        </div>
+    </div>
+</footer>
+{{# output.page_doc_link }}
+    <p class="helplink">{{{ output.page_doc_link }}}</p>
+{{/ output.page_doc_link }}
+<nav class="nav navbar-nav d-md-none" aria-label="{{#str}}custommenu, admin{{/str}}">
+    {{# output.custom_menu_flat }}
+    <ul class="list-unstyled pt-3">
+        {{> theme_boost/custom_menu_footer }}
+    </ul>
+    {{/ output.custom_menu_flat }}
+</nav>
+{{{output.standard_footer_html}}}
+{{{output.standard_end_of_body_html}}}
+{{#js}}
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+{{/js}}

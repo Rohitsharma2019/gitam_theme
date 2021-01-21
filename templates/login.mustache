@@ -1,0 +1,85 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_boost/login
+
+    Login page template
+
+    Example context (json):
+    {
+        "output": {
+            "doctype": "<!DOCTYPE html>",
+            "page_title": "Login page",
+            "favicon": "favicon.ico",
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        }
+    }
+}}
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+
+<div id="page-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="container-fluid mt-0">
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" class="col-12">
+                    {{{ output.course_content_header }}}
+                    
+                    {{{ output.main_content }}}
+                    {{{ output.course_content_footer }}}
+                </section>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <footer id="page-login-index" class="bg-light text-dark">
+
+                <div class="campusinfo">
+                    <div class="row">
+      	                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        	                <h4>Central Administrative Office</h4>
+        	                <p>Gandhi nagar, Rushikonda<br> Visakhapatnam-530045 <br>Andhra Pradesh, INDIA.</p>
+		                    <p><i class="fa fa fa-phone"></i> 0891-2840501<br>
+                            <i class="fa fa fa-envelope"></i> registrar@gitam.edu</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        	                <h4>Visakhapatnam campus</h4>
+        	                <p>Gandhi nagar, Rushikonda <br> Visakhapatnam-530045<br> Andhra Pradesh, INDIA.</p>
+        	                <p>0891-2840501<br>vspinfo@gitam.edu</p>
+			                <a href="https://www.gitam.edu/help-desk/view/visakhapatnam">Contact Visakhapatnam campus</a>
+       	                </div>
+       	                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        	                <h4>Hyderabad campus</h4>
+        	                <p>Rudraram, Patancheru mandal<br> Hyderabad-502329 <br> Telangana, INDIA.</[p]>
+        	                <p>08455-221200 / 1 / 2 / 3 / 4<br>hydinfo@gitam.edu</p>
+			                <a href="https://www.gitam.edu/help-desk/view/hyderabad">Contact Hyderabad campus</a>
+      	                </div>
+       	                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        	                <h4>Bengaluru campus</h4>
+        	                <p>NH 207, Nagadenehalli<br> Doddaballapur taluk <br> Bengaluru-561203, Karnataka, INDIA. </p>
+        	                <p>080-28098000 / 07<br>9108514034, 9108514028, 8971199907<br>blrinfo@gitam.edu</p>
+			                <a href="https://www.gitam.edu/help-desk/view/bengaluru">Contact Bengaluru campus</a>
+                        </div>
+                    </div>
+                </div>
+
+    </footer>
